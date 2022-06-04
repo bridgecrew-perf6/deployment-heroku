@@ -10,16 +10,7 @@ const SALT_ROUND = 10;
 class AuthService {
   static async register({ name, email, password, role }) {
     // Payload Validation
-    if (!role) {
-      return {
-        status: false,
-        status_code: 400,
-        message: "Role is required",
-        data: {
-          registered_user: null,
-        },
-      };
-    }
+
     if (!name) {
       return {
         status: false,
@@ -61,6 +52,16 @@ class AuthService {
         },
       };
     }
+    if (!role) {
+      return {
+        status: false,
+        status_code: 400,
+        message: "Role is required",
+        data: {
+          registered_user: null,
+        },
+      };
+    }
 
     const getUserByEmail = await usersRepository.getByEmail({ email });
 
@@ -79,6 +80,7 @@ class AuthService {
         name,
         email,
         password: hashedPassword,
+        role,
       });
 
       return {
