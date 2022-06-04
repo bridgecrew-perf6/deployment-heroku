@@ -52,6 +52,6 @@ app.get("/users/:id/posts", usersController.getPostsByID);
 // Public File Access
 app.use("/public/files", express.static(path.join(__dirname, "storages")));
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log(`Server berhasil berjalan di port http://localhost:${PORT}`);
 });
