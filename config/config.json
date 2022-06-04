@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "Ferdi12345",
+    "database": "instagram_API",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "Ferdi12345",
+    "database": "instagram_API",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "Ferdi12345",
+    "database": "instagram_API",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
